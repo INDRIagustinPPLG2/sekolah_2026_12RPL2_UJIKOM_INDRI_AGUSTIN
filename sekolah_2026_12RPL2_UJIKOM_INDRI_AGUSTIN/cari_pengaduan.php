@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    silakan cari
+    <h1>Cari pengaduan</h1>
+    <table border="1">
+  <tr>
+    <td>tanggal</td>
+    <td>bulan</td>
+    <td>siswa</td>
+    <td>kategori</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th></th>
+     <th></th>
+    <th></th>
+    
+  </tr>
+</table>
+<button>cari</button>
+
 </body>
 </html>
