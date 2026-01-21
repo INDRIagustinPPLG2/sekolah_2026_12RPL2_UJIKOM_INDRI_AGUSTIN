@@ -8,33 +8,35 @@
 <body>
     <center>
     <h1>halaman pengaduan</h1>
-   <form action="">
+   <form action="proses-pengaduan.php" method="POST">
         <div>
         <label for="">NIS</label> <br/>
-        <input type="text" />
+        <input type="text" name="nis"/>
         </div>
         <div>
         <label for="">Kategori</label> <br/>
-        <select>
-            <option >Fasilitas</option>
-            <option>Lingkunagn</option>
+        <select name="kategori">
+            <option value="">-- pilih kategori --</option>
+            <option value="1">Fasilitas</option>
+            <option value="2">Lingkungan</option>
         </select>
         </div>
         <div>
         <label for="">lokasi</label> <br/>
-        <input type="text" />
+        <input type="text" name="lokasi"/>
         </div>
         <div>
         <label for="">keterangan</label> <br/>
-        <textarea></textarea>
+        <textarea name="keterangan"></textarea>
         </div>
         <div>
         <button>kirim</button>
-        </div>
-         <div>
-        <a href="detail_pengaduan.php"><button>detail pengaduan</button></a>
         </div>
     </form>
     </center>
 </body>
 </html>
+<!-- <?php
+//  mysqli_query($koneksi, "INSERT INTO `input_aspirasi` (`id_pelaporan`, `nis`, `id_kategori`, `lokasi`, `keterangan`, `status`, `feedback`) 
+// VALUES (NULL, '006', '1', 'kalau', 'nanti', 'menunggu', NULL)");
+// ?> -->
