@@ -1,13 +1,13 @@
 <?php
-   echo $nis        =$_POST['nis'];
-    echo $lokasi     =$_POST['lokasi'];
-    echo $kategori   =$_POST['kategori'];
-    echo $keterangan =$_POST['keterangan'];
+     $nis        =$_POST['nis'];
+     $lokasi     =$_POST['lokasi'];
+     $kategori   =$_POST['kategori'];
+     $keterangan =$_POST['keterangan'];
 
-// echo "<h2>Pengaduan berhasil dikirim</h2>";
-// echo "NIS: $nis <br>";
-// echo "Lokasi: $lokasi <br>";
-// echo "Keterangan: $keterangan <br>";
+echo "<h2>Pengaduan berhasil dikirim</h2>";
+echo "NIS: $nis <br>";
+echo "Lokasi: $lokasi <br>";
+echo "Keterangan: $keterangan <br>";
 
 
 
