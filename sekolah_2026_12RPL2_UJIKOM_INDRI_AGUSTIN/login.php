@@ -8,31 +8,36 @@
 <body>
     <center>
     <h1>login</h1>
-    <form action="">
+    <form action="index.php" method="POST">
         <div>
         <label for="">username</label> <br/>
-        <input type="text" />
+        <input type="text" name="username" />
         </div>
          <div>
         <label for="">password</label> <br/>
-        <input type="text" />
+        <input type="text" name="password"/>
         </div>
         <div>
         <label for="">role</label> <br/>
-        <select>
-            <option >siswa</option>
-            <option>admin</option>
+        <select name="role">
+            <option VALUES="siswa" >siswa</option>
+            <option VALUES="admin" >admin</option>
         </select>
         </div>
          <div>
         <label for="">NIS</label> <br/>
-        <input type="text" />
+        <input type="text" name="nis"/>
         </div>
          <div>
         <label for="">kelas</label> <br/>
-        <input type="text" />
+        <input type="text" name="kelas" />
+        </div>
+        <div>
+        <button>submit</button>
         </div>
     </form>
     </center>
 </body>
 </html>
+
+   
