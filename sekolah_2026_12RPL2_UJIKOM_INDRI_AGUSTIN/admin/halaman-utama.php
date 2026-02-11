@@ -13,8 +13,10 @@
             text-align: center;
       }
       button {
-         width: 125pxpx; /* Lebar tetap 200 piksel */
-  height: 40px;
+         width: 350px; /* Lebar tetap 200 piksel */
+        height: 40px;
+        border-radius: 25px;
+        margin-bottom: 10px;
       }
       .pengaduan {
         background-color: #fbe290;
@@ -31,9 +33,16 @@
 </head>
 <body>
   <div>
+    <center>
     <h1>SELAMAT DATANG ADMIN DI WEBSITE PENGADUAN MUTU</h1>
-   <center><a href="detail_pengaduanadmin.php"><button class="pengaduan">detail pengaduan</button></a>
- <a href="data_pengaduan.php"><button class="halaman">data pengaduan</button></a></center>
+  <a href="data-siswa.php"><button class="pengaduan">tambah data siswa</button></a><br/>
+
+ <a href=""><button class="halaman">data siswa</button></a><br/>
+
+   <a href=""><button class="pengaduan">tambah kategori</button></a><br/>
+
+ <a href="data_pengaduan.php"><button class="halaman">history pengaduan</button></a><br/>
+</center>
 </div>
     
 </body>
