@@ -9,6 +9,7 @@ $query = mysqli_query($koneksi, $sql);
 while($data = mysqli_fetch_assoc($query)){ ?>
 <p>Lokasi <?php echo $data['lokasi']; ?> </p>
 <p>Keterangan <?php echo $data['keterangan']; ?> </p>
-<p>status <?php echo $data['ststus']; ?> 
+<p>status <?php echo $data['status']; ?> 
 <hr/>
 <?php } ?>
+
