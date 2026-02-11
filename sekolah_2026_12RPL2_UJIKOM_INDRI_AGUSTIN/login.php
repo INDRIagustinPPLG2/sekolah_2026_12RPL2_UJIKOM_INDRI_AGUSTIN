@@ -1,43 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login</title>
 </head>
 <body>
-    <center>
-    <h1>login</h1>
-    <form action="index.php" method="POST">
-        <div>
-        <label for="">username</label> <br/>
-        <input type="text" name="username" />
-        </div>
-         <div>
-        <label for="">password</label> <br/>
-        <input type="text" name="password"/>
-        </div>
-        <div>
-        <label for="">role</label> <br/>
-        <select name="role">
-            <option VALUES="siswa" >siswa</option>
-            <option VALUES="admin" >admin</option>
-        </select>
-        </div>
-         <div>
-        <label for="">NIS</label> <br/>
-        <input type="text" name="nis"/>
-        </div>
-         <div>
-        <label for="">kelas</label> <br/>
-        <input type="text" name="kelas" />
-        </div>
-        <div>
-        <button>submit</button>
-        </div>
-    </form>
-    </center>
+     <center>
+     <h1>LOGIN</h1>
+     <form action="proses-login.php" method="post">
+          <label for="">Username</label>
+          <input type="text" name="username"/>
+          <br/>
+
+          <label for="">Password</label>
+          <input type="password" name="password"/>
+          <br/>
+          
+          <button>Login</button>
+     </form>
+     </center>
 </body>
 </html>
-
-   
