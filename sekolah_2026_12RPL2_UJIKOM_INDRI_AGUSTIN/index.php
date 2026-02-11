@@ -38,15 +38,4 @@
     
 </body>
 </html>
-<?php
-     $nama       =$_POST['username'];
-     $code  =$_POST['password'];
-     $peran  =$_POST['role'];
-     $nomor   =$_POST['nis'];
-     $ruangan =$_POST['kelas'];
 
-
-$koneksi = mysqli_connect("localhost","root","","ujikom_12rpl2_indriagustin");
-
-mysqli_query($koneksi,"INSERT INTO user (id, username, password, role, nis, kelas) VALUES (NULL, '$nama', '$code', '$peran', '$nomor', '$ruangan')");
-?>
