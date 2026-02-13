@@ -3,12 +3,15 @@
 <table border="1" cellpadding="10" cellspacing="0">
     <tr>
         <th>NO</th> 
+        <th>tanggal</th>
         <th>ID kategoro</th>
         <th>Nama Kategori</th> 
         <th>Lokasi</th>
         <th>Keterangan</th>
         <th>status</th>
+        <th>feedback</th>
         <th>Detail pengaduan</th>
+      
     </tr>
     <?php
     include '../koneksi.php';
@@ -23,14 +26,17 @@
     ?>
         <tr>
             <td><?= $no++?></td>
+            <td><?= $data['tanggal']?></td>
             <td><?= $data['id_kategori']?></td>
             <td><?= $data['ket_kategori']?></td>
             <td><?= $data['lokasi']?></td>
             <td><?= $data['keterangan']?></td>
             <td><?= $data['status']?></td>
+             <td><?= $data['feedback']?></td>
             <td>
-                <a htef="detail_pengaduan.php?id=<?= $data['id_pelaporan'] ?>">
+                <a href="detail_pengaduanadmin.php?id=<?= $data['id_pelaporan'] ?>">
                     <button>Lihat</button>
+                </a>
             </td>
         </tr>
    <?php } ?>
