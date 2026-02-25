@@ -1,11 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
-    header("Location: ../login.php");
-    exit;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,14 +24,9 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
           width: 50px; 
           height: auto  
         }
-        .tombol {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
         button {
-            width: 250px; 
-            height: 100px;
+            width: 150px; 
+            height: 50px;
             border-radius: 20px;
             background-color: #375534;
             border: none;
@@ -67,16 +54,8 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
              <h1> SEKOLAH SMK TI MUMAMMADIYAH 1 CIKAMPEK</h1>
         </div>
         <br> </br>
-        <div class="tombol">
-          <div>
-          <a href="data-siswa.php"><button>TAMBAH DATA SISWA</button></a>
-          <a href="tampil-data-siswa.php"><button>DATA SISWA</button></a>
-          </div>
-          <div>
-          <a href=""><button>TAMBAH KATEGORI</button></a></div>
-          <a href="data_pengaduan.php"><button>HISTORY PENGADUAN</button></a>
-          </div>
-        </div>
+        <div><a href="login.php"><button>LOGIN</button></a>
+    </div>
 
 </body>
 </html>

@@ -1,5 +1,12 @@
-<h2>DATA PENGADUAN</h2>
+<?php
+session_start();
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
+    header("Location: ../login.php");
+    exit;
+}
+?>
 
+<h2>DATA PENGADUAN</h2>
 <table border="1" cellpadding="10" cellspacing="0">
     <tr>
         <th>NO</th> 

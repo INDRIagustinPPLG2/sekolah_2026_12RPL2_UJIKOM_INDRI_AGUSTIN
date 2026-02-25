@@ -1,4 +1,12 @@
 <?php
+session_start();
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
+    header("Location: ../login.php");
+    exit;
+}
+?>
+
+<?php
 include '../koneksi.php';
 $query ="SELECT * FROM user WHERE role ='siswa'";
 $result = mysqli_query($koneksi, $query);

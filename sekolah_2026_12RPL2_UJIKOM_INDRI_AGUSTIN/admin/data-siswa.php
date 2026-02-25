@@ -1,4 +1,12 @@
 <?php
+session_start();
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
+    header("Location: ../login.php");
+    exit;
+}
+?>
+
+<?php
 if (isset($_POST['username'])) {
      $nama       =$_POST['username'];
      $code  =password_hash($_POST['password'],PASSWORD_DEFAULT); 

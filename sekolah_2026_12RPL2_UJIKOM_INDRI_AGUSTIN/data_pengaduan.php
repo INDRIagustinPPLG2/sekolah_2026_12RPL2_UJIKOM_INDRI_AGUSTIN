@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'siswa') {
+    header("Location: ../login.php");
+    exit;
+}
+?>
+
 <h1>DATA PENGADUAN</h1>
 <table border="1" cellpadding="10" cellspacing="0">
     <tr>
