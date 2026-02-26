@@ -1,10 +1,10 @@
-<?php
+<!-- <?php
 session_start();
 if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
     header("Location: ../login.php");
     exit;
 }
-?>
+?> -->
 
 <?php
 if (isset($_POST['username'])) {
@@ -25,31 +25,50 @@ mysqli_query($koneksi,"INSERT INTO user (id, username, password, role, nis, kela
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tambah data siswa</title>
+    <style>
+        body{
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6b9071,  #e3eed4);
+            padding: 20px 40px;
+        }
+        .input {
+            height: 50px;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            background: #e3eed4;
+            /* flex-wrap: wrap; */
+        }
+    </style>
 </head>
 <body>
     <center>
     <h1>TAMBAH DATA SISWA</h1>
-    <form  method="POST">
-          <div>
-        <label for="">NIS</label> <br/>
-        <input type="text" name="nis"/>
-        </div>
-        <div>
-        <label for="">NAMA</label> <br/>
-        <input type="text" name="username" />
-        </div>
-         <div>
-        <label for="">KELAS</label> <br/>
-        <input type="text" name="kelas" />
-        </div>
-         <div>
-        <label for="">PASSWORD</label> <br/>
-        <input type="text" name="password"/>
-        </div>
-        <div>
-      <button>KIRIM</button>
-        </div>
-    </form>
+        <form  method="POST">
+            <div class="input">
+                <div>
+                    <label for="">NIS</label> <br/>
+                    <input type="text" name="nis"/>
+                </div>
+                <div>
+                    <label for="">NAMA</label> <br/>
+                    <input type="text" name="username" />
+                </div>
+                <div>
+                    <label for="">KELAS</label> <br/>
+                    <input type="text" name="kelas" />
+                </div>
+                <div>
+                    <label for="">PASSWORD</label> <br/>
+                    <input type="text" name="password"/>
+                </div>
+                <div>
+                    <button>KIRIM</button>
+                </div>
+            </div>
+        </form>
     </center>
     <?php
     include "tampil-data-siswa.php";

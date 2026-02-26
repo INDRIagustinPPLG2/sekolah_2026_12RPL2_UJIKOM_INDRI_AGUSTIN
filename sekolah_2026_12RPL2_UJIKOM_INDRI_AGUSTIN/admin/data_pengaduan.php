@@ -5,21 +5,34 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
     exit;
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+</head>
+<body>
+    
 
 <h2>DATA PENGADUAN</h2>
-<table border="1" cellpadding="10" cellspacing="0">
-    <tr>
-        <th>NO</th> 
-        <th>tanggal</th>
-        <th>ID kategoro</th>
-        <th>Nama Kategori</th> 
-        <th>Lokasi</th>
-        <th>Keterangan</th>
-        <th>status</th>
-        <th>feedback</th>
-        <th>Detail pengaduan</th>
-      
-    </tr>
+<table id="datatable" class="apaaja" border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>NO</th> 
+            <th>tanggal</th>
+            <th>ID kategoro</th>
+            <th>Nama Kategori</th> 
+            <th>Lokasi</th>
+            <th>Keterangan</th>
+            <th>status</th>
+            <th>feedback</th>
+            <th>Detail pengaduan</th>
+        
+        </tr>
+    </thead>
+    <tbody>    
     <?php
     include '../koneksi.php';
     $no = 1;
@@ -47,4 +60,26 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
             </td>
         </tr>
    <?php } ?>
+  </tbody> 
 </table>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+  <script>
+     $(document).ready(function() {
+         $('#datatable').DataTable({
+             "language": {
+                 "search": "Cari:",
+                 "lengthMenu": "Tampilkan MENU data",
+                 "info": "Menampilkan START sampai END dari TOTAL data",
+                 "paginate": {
+                     "next": "Selanjutnya",
+                     "previous": "Sebelumnya"
+                 }
+             }
+         });
+     });
+ </script>
+ 
+</body>
+</html>

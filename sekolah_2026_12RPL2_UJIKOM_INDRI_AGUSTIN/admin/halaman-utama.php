@@ -34,8 +34,11 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
         }
         .tombol {
           display: flex;
-          align-items: center;
+          justify-content: center;
           justify-content: space-between;
+          gap: 25px;
+          margin-top: 50px;
+          flex-wrap: wrap;
         }
         button {
             width: 250px; 
@@ -44,14 +47,12 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
             background-color: #375534;
             border: none;
             border-bottom: 4px solid #547561;
-            transition: all 0.3s ease; 
+            transition: all 0.3s ease;
+            color: #e3eed4;
+            
         }
         button:hover {
             background-color: #7da78e;
-            transform: scale(1.25);
-        }
-        button:active {
-            transform: scale(0.130);
         }
     </style>
 </head>
@@ -63,20 +64,19 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
     <br></br>
     <div class="ibu2">
         <div class="anak1">
-             <h1>SELAMAT DATANG DI WEBSITE PENGAUDAN SARANA</h1> 
+             <h1>SELAMAT DATANG ADMIN DI WEBSITE PENGAUDAN SARANA</h1> 
              <h1> SEKOLAH SMK TI MUMAMMADIYAH 1 CIKAMPEK</h1>
         </div>
-        <br> </br>
-        <div class="tombol">
-          <div>
-          <a href="data-siswa.php"><button>TAMBAH DATA SISWA</button></a>
-          <a href="tampil-data-siswa.php"><button>DATA SISWA</button></a>
-          </div>
-          <div>
-          <a href=""><button>TAMBAH KATEGORI</button></a></div>
-          <a href="data_pengaduan.php"><button>HISTORY PENGADUAN</button></a>
-          </div>
-        </div>
+    </div>
+    <br> </br>
+    <div class="tombol">
+       
+        <a href="data-siswa.php"><button>TAMBAH DATA SISWA</button></a>
+        <a href="tambah-kategori.php"><button>TAMBAH KATEGORI</button></a>
+        <a href="data_pengaduan.php"><button>HISTORY PENGADUAN</button></a>
+    </div>
+   
+       
 
 </body>
 </html>

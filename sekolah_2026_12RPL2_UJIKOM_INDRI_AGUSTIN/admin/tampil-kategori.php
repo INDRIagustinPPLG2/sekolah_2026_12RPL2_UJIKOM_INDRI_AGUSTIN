@@ -1,6 +1,6 @@
 <?php
 include '../koneksi.php';
-$query ="SELECT * FROM user WHERE role ='siswa'";
+$query ="SELECT * FROM kategori";
 $result = mysqli_query($koneksi, $query);
 ?>
 
@@ -9,26 +9,24 @@ $result = mysqli_query($koneksi, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>menampilkan data siswa</title>
+    <title>data kategori</title>
 </head>
 <body>
     <center>
-        <h2>Data Siswa</h2>
+        <h2>DATA KATEGORI</h2>
         <table border="1" cellpadding="8" cellspacing="0">
             <tr>
-                <th>NIS</th>
-                <th>Nama</th>
-                <th>Kelas</th>
+                <th>ID KATEGORI</th>
+                <th>NAMA KATEGORI</th>
                 <th>Aksi</th>
             </tr>
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <tr>
-                <td><?php echo $row['nis']; ?></td>
-                <td><?php echo $row['username']; ?></td>
-                <td><?php echo $row['kelas']; ?></td>
+                <td><?php echo $row['id_kategori']; ?></td>
+                <td><?php echo $row['ket_kategori']; ?></td>
                 <td>
-                    <a href="edit.php?nis=<?php echo $row['nis']; ?>">Edit</a>
-                      <a href="delete.php?nis=<?php echo $row['nis']; ?>"
+                    <a href="edit-kategori.php?id_kategori=<?php echo $row['id_kategori']; ?>">Edit</a>
+                      <a href="delete-kategori.php?id_kategori=<?php echo $row['id_kategori']; ?>"
                             onclick="retrun confrim('Yakin ingin menghapus data ini?')">
                             Delete
                       </a>

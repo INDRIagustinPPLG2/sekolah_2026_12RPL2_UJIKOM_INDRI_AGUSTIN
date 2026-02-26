@@ -1,11 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
-    header("Location: ../login.php");
-    exit;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,14 +24,9 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
           width: 50px; 
           height: auto  
         }
-        .ibu {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
         button {
-            width: 250px; 
-            height: 100px;
+            width: 150px; 
+            height: 50px;
             border-radius: 20px;
             background-color: #375534;
             border: none;
@@ -61,24 +48,14 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
          <div>SMK TI MUHAMMADIYAH 1 CIKAMPEK</div> 
     </header>
     <br></br>
-    <div class="ibu">
+    <div class="ibu2">
         <div class="anak1">
              <h1>SELAMAT DATANG DI WEBSITE PENGAUDAN SARANA</h1> 
              <h1> SEKOLAH SMK TI MUMAMMADIYAH 1 CIKAMPEK</h1>
         </div>
+        <br> </br>
+        <div><a href="login.php"><button>LOGIN</button></a>
     </div>
-<center>
-    <div class="ibu2">
-        <div>
-            <a href="data-siswa.php"><button>TAMBAH DATA SISWA</button></a>
-            <a href="tampil-data-siswa.php"><button>DATA SISWA</button></a>
-        </div>
-     
-        <div>
-            <a href=""><button>TAMBAH KATEGORI</button></a>
-            <a href="data_pengaduan.php"><button>HISTORY PENGADUAN</button></a>
-        </div>
-    </div>
-</center>
+
 </body>
 </html>

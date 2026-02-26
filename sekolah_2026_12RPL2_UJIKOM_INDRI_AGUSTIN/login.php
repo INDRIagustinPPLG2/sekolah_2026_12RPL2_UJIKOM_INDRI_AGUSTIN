@@ -33,11 +33,8 @@
         }
      button:hover {
             background-color: #7da78e;
-            transform: scale(1.25);
         }
-     button:active {
-            transform: scale(0.130);
-        }
+
      </style>
 </head>
 <body>
