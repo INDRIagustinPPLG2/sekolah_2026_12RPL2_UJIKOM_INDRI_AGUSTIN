@@ -13,6 +13,7 @@ if ($data) {
 
         $_SESSION['username'] = $data['username'];
         $_SESSION['role'] = $data['role'];
+        $_SESSION['nis']      = $data['nis'];
 
         if ($data['role'] == "admin") {
             header("Location: admin/halaman-utama.php");

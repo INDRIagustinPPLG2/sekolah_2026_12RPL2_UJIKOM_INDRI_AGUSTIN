@@ -9,57 +9,72 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'siswa') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-      body{
-            background-color: #B1C9EF;
-      }
-      div{
-       margin: 100px;
- 
-      }
-      h1 {
-            text-align: center;
-      }
-      .pengaduan {
-        background-color: #fbe290;
-        color:#bf7e46;
-      }
-      .halaman{
-        background-color: #fbedd6;
-        color : #bf7e46;
-      }
-         button {
-         width: 350px; /* Lebar tetap 200 piksel */
-         height: 40px;
-         border-radius: 25px;
-         margin-bottom: 10px;
-      }
+  <title>DASHBOARD SISWA</title>
+        <style>
+        body{
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6b9071,  #e3eed4);
+            padding: 20px 40px;
+        }
+        header{
+            border-radius: 20px;
+            background-color: #375534;
+            padding: 5px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white; 
+        }
+        img{
+          width: 50px; 
+          height: auto  
+        }
+        .tombol {
+          display: flex;
+          justify-content: center;
+          /* justify-content: space-between; */
+          gap: 25px;
+          margin-top: 100px;
+          /* flex-wrap: wrap; */
+        }
+        button {
+            width: 250px; 
+            height: 100px;
+            border-radius: 20px;
+            background-color: #375534;
+            border: none;
+            border-bottom: 4px solid #547561;
+            transition: all 0.3s ease;
+            color: #e3eed4;
+            
+        }
+        button:hover {
+            background-color: #7da78e;
+        }
+        a {
+            color: white;
+            text-decoration: none; 
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dashboard siswa</title>
 </head>
 <body>
-  <div>
+  <header>
+         <div> <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/logo_mutu_png_transparant-removebg-preview-1.png"></div>
+         <div>SMK TI MUHAMMADIYAH 1 CIKAMPEK</div> 
+         <a href="logout.php">LOGOUT</a>
+    </header>
     <center>
-    <h1>SELAMAT DATANG DI WEBSITE PENGADUAN MUTU</h1>
-      <a href="form_pengaduan.php"><button class="pengaduan">buat pengaduan</button></a>
-      <a href="data_pengaduan.php"><button class="halaman">history pengaduan</button></a>
-      <a href=""><button class="pengaduan">ganti password</button></a><br/>
-      </center>
-</div>
+    <h1 style="margin-top: 100px;">SELAMAT DATANG DI WEBSITE PENGAUDAN SARANA</h1> 
+             <h1> SEKOLAH SMK TI MUMAMMADIYAH 1 CIKAMPEK</h1>
+    </center>
+  <div class="tombol">
+      <a href="form_pengaduan.php"><button class="pengaduan">BUAT PENGADUAN</button></a>
+      <a href="data_pengaduan.php"><button class="halaman">HISTORY PENGADUAN</button></a> 
+  </div>
     
 </body>
 </html>
-<!-- <?php
-//      $nama       =$_POST['username'];
-//      $code  =$_POST['password'];
-//      $peran  =$_POST['role'];
-//      $nomor   =$_POST['nis'];
-//      $ruangan =$_POST['kelas'];
-
-
-// $koneksi = mysqli_connect("localhost","root","","ujikom_12rpl2_indriagustin");
-
-// mysqli_query($koneksi,"INSERT INTO user (id, username, password, role, nis, kelas) VALUES (NULL, '$nama', '$code', '$peran', '$nomor', '$ruangan')");
-?> -->

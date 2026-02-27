@@ -9,7 +9,7 @@ $result = mysqli_query($koneksi, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>data kategori</title>
+    <title>DATA KATEGORI</title>
 </head>
 <body>
     <center>
@@ -26,8 +26,8 @@ $result = mysqli_query($koneksi, $query);
                 <td><?php echo $row['ket_kategori']; ?></td>
                 <td>
                     <a href="edit-kategori.php?id_kategori=<?php echo $row['id_kategori']; ?>">Edit</a>
-                      <a href="delete-kategori.php?id_kategori=<?php echo $row['id_kategori']; ?>"
-                            onclick="retrun confrim('Yakin ingin menghapus data ini?')">
+                     <a href="delete-kategori.php?id_kategori=<?php echo $row['id_kategori']; ?>"
+                            onclick="return confirm('Yakin ingin menghapus data ini?')">
                             Delete
                       </a>
                 </td>

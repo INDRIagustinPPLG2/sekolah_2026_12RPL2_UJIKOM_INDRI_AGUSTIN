@@ -9,7 +9,7 @@ $result = mysqli_query($koneksi, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>menampilkan data siswa</title>
+    <title>DATA SISWA</title>
 </head>
 <body>
     <center>
@@ -29,7 +29,7 @@ $result = mysqli_query($koneksi, $query);
                 <td>
                     <a href="edit.php?nis=<?php echo $row['nis']; ?>">Edit</a>
                       <a href="delete.php?nis=<?php echo $row['nis']; ?>"
-                            onclick="retrun confrim('Yakin ingin menghapus data ini?')">
+                            onclick="return confirm('Yakin ingin menghapus data ini?')">
                             Delete
                       </a>
                 </td>

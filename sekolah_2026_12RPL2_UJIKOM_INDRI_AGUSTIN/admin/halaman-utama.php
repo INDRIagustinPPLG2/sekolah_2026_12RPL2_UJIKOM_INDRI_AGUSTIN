@@ -11,7 +11,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DASHBOARD ADMIN</title>
     <style>
         body{
             margin: 0;
@@ -37,7 +37,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
           justify-content: center;
           justify-content: space-between;
           gap: 25px;
-          margin-top: 50px;
+          margin-top: 70px;
           flex-wrap: wrap;
         }
         button {
@@ -54,26 +54,28 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
         button:hover {
             background-color: #7da78e;
         }
+        a {
+            color: white;
+            text-decoration: none; 
+        }
     </style>
 </head>
 <body>
     <header>
          <div> <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/logo_mutu_png_transparant-removebg-preview-1.png"></div>
          <div>SMK TI MUHAMMADIYAH 1 CIKAMPEK</div> 
+         <a href="../logout.php">LOGOUT</a>
     </header>
     <br></br>
-    <div class="ibu2">
-        <div class="anak1">
              <h1>SELAMAT DATANG ADMIN DI WEBSITE PENGAUDAN SARANA</h1> 
              <h1> SEKOLAH SMK TI MUMAMMADIYAH 1 CIKAMPEK</h1>
-        </div>
-    </div>
     <br> </br>
+
     <div class="tombol">
        
         <a href="data-siswa.php"><button>TAMBAH DATA SISWA</button></a>
         <a href="tambah-kategori.php"><button>TAMBAH KATEGORI</button></a>
-        <a href="data_pengaduan.php"><button>HISTORY PENGADUAN</button></a>
+        <a href="data_pengaduan.php"><button>DATA PENGADUAN</button></a>
     </div>
    
        

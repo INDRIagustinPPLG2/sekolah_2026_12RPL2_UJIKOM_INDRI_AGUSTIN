@@ -3,7 +3,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Login</title>
+     <title>LOGIN</title>
      <style>
      body{
             margin: 0;
@@ -15,7 +15,7 @@
           }
      .ibu{
            width: 300px;
-           height: 300px;
+           height: 350px;
            margin: 100px auto;
            background: #e3eed4;
            border-bottom: 4px solid #547561;
@@ -34,11 +34,16 @@
      button:hover {
             background-color: #7da78e;
         }
+        a {
+            color: black;
+            text-decoration: none; 
+        }
 
      </style>
 </head>
 <body>
     <div class="ibu">
+     <a href="HALAMAN-UTAMA.PHP">BACK</a>
      <center>
      <h1>LOGIN</h1>
      <form action="proses-login.php" method="post">
