@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
         <header>
-         <div> <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/logo_mutu_png_transparant-removebg-preview-1.png"></div>
+         <div> <img src="https://lh5.googleusercontent.com/proxy/y2VwwWrgukml2gdV3q9yxUPt9EX_sm2hpvr3VZjO_3hPbUwdhz8yfmDeD19P8WYxNtIDlYg_znTlxNf9MIAC-FzDSh7Innpqb29p0EZMW8uHUKIGAHu_VYoHL8VxEnQb8ePm6aZ_3usk7OxxpldF1HUERb4ds9TFXaoT1VhCFps"></div>
          <div>SMK TI MUHAMMADIYAH 1 CIKAMPEK</div>
          <div><a class="i" href="tambah-kategori.php">BACK</a></div>
     </header>

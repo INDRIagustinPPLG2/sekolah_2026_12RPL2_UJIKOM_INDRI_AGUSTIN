@@ -76,7 +76,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
 </head>
 <body>
      <header>
-         <div> <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/logo_mutu_png_transparant-removebg-preview-1.png"></div>
+         <div> <img src="https://lh5.googleusercontent.com/proxy/y2VwwWrgukml2gdV3q9yxUPt9EX_sm2hpvr3VZjO_3hPbUwdhz8yfmDeD19P8WYxNtIDlYg_znTlxNf9MIAC-FzDSh7Innpqb29p0EZMW8uHUKIGAHu_VYoHL8VxEnQb8ePm6aZ_3usk7OxxpldF1HUERb4ds9TFXaoT1VhCFps"></div>
          <div>SMK TI MUHAMMADIYAH 1 CIKAMPEK</div>
          <div><a class="i" href="halaman-utama.php">DASHBOARD</a></div>
     </header>
@@ -85,15 +85,17 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>id pelaporan</th> 
-                    <th>tanggal</th>
-                    <th>ID kategoro</th>
-                    <th>Nama Kategori</th> 
-                    <th>Lokasi</th>
-                    <th>Keterangan</th>
-                    <th>status</th>
-                    <th>feedback</th>
-                    <th>detail</th>
+                    <th>ID PELAPORAN</th> 
+                    <th>NIS</th>
+                    <th>NAMA</th>
+                    <th>TANGGAL</th>
+                    <!-- <th>ID KATEGORI</th> -->
+                    <th>NAMA KATEGORI</th> 
+                    <th>LOKASI</th>
+                    <th>KETERANGAN</th>
+                    <th>STATUS</th>
+                    <th>FEEDBACK</th>
+                    <th>DETAIL</th>
                 
                 </tr>
             </thead>
@@ -102,18 +104,20 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
         include '../koneksi.php';
         $no = 1;
 
-        $query = mysqli_query($koneksi, "SELECT input_aspirasi.*, kategori.ket_kategori
-                                        FROM input_aspirasi
-                                        LEFT JOIN kategori
-                                        ON input_aspirasi.id_kategori = kategori.id_kategori");
+        $query = mysqli_query($koneksi, "SELECT input_aspirasi.*, kategori.ket_kategori, user.username 
+    FROM input_aspirasi 
+    LEFT JOIN kategori ON input_aspirasi.id_kategori = kategori.id_kategori 
+    LEFT JOIN user ON input_aspirasi.nis = user.nis;");
 
         while ($data = mysqli_fetch_assoc($query)) {
         ?>
                 <tr>
                     <td><?= $no++?></td>
                     <td><?= $data['id_pelaporan']?></td>
+                    <td><?= $data['nis']?></td>
+                    <td><?= $data['username']?></td>
                     <td><?= $data['tanggal']?></td>
-                    <td><?= $data['id_kategori']?></td>
+                    <!-- <td><?= $data['id_kategori']?></td> -->
                     <td><?= $data['ket_kategori']?></td>
                     <td><?= $data['lokasi']?></td>
                     <td><?= $data['keterangan']?></td>
